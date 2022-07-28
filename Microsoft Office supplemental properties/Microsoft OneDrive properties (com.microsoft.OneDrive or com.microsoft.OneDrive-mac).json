@@ -251,7 +251,7 @@
         "EnableSyncAdminReports": {
             "title": "Enable Sync Admin Reports",
             "default": false,
-            "description": "This setting specifies whether Sync Admin Reports is enabled. If you enable this setting, OneDrive sync health reports will be sent to OneDrive sync health dashboard in the Microsoft 365 Apps Admin Center.",
+            "description": "This setting specifies whether Sync Admin Reports is enabled. If you enable this setting, OneDrive sync health reports will be sent to OneDrive sync health dashboard in the Microsoft 365 Apps admin center.",
             "property_order": 62,
             "type": "boolean",
             "options": {
