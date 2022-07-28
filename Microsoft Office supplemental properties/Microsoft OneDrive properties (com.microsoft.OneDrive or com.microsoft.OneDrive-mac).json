@@ -248,6 +248,22 @@
                 }
             ]
         },
+        "EnableSyncAdminReports": {
+            "title": "Enable Sync Admin Reports",
+            "default": false,
+            "description": "This setting specifies whether Sync Admin Reports is enabled. If you enable this setting, OneDrive sync health reports will be sent to OneDrive sync health dashboard in the Microsoft 365 Apps admin center.",
+            "property_order": 62,
+            "type": "boolean",
+            "options": {
+                "infoText": "Key: EnableSyncAdminReports"
+            },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://docs.microsoft.com/en-us/onedrive/sync-health?tabs=macos"
+                }
+            ]
+        },
         "HideDockIcon": {
             "title": "Hide Dock Icon",
             "default": true,
