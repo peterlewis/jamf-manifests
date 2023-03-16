@@ -296,6 +296,70 @@
                 }
             ]
         },
+        "KFMBlockOptIn": {
+            "title": "KFM Block Opt-In",
+            "default": "e.g. 1 or 2",
+            "description": "This setting prevents users from moving their Documents and Desktop folders to any OneDrive account. If you enable KFMBlockOptIn, users aren't prompted to protect their Desktop and Documents folders, and the Manage backup command is disabled. If the user has already moved their Desktop and Documents folders, the files in those folders will remain in OneDrive. This setting doesn't take effect if you've enabled KFMOptInWithWizard or KFMSilentOptIn. If you set this setting's value to 1, it will prevent Folder Backup. If you set the value to 2, it will redirect any folders previously used for Folder Backup back to the user’s device and stop the setting from running further.",
+            "property_order": 71,
+            "type": "string",
+            "options": {
+                "infoText": "Key: KFMBlockOptIn"
+            },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://learn.microsoft.com/en-us/sharepoint/deploy-and-configure-on-macos#kfmblockoptin"
+                }
+            ]
+        },
+        "KFMBlockOptOut": {
+            "title": "KFM Block Opt-Out",
+            "default": "true",
+            "description": "This setting forces users to keep their Documents and Desktop folders directed to OneDrive. If you enable this setting, the Stop Backup button in the Manage Folder Backup window is disabled, and users receive an error if they try to stop syncing their Desktop or Documents folder.",
+            "property_order": 72,
+            "type": "boolean",
+            "options": {
+                "infoText": "Key: KFMBlockOptOut"
+            },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://learn.microsoft.com/en-us/sharepoint/deploy-and-configure-on-macos#kfmblockoptout"
+                }
+            ]
+        },
+        "KFMOptInWithWizard": {
+            "title": "KFM Opt-In With Wizard",
+            "default": "e.g. 0344bcc1-e70b-4e24-a67e-923cb9a226a7",
+            "description": "This setting displays a wizard that prompts users to move their Documents and Desktop folders to OneDrive. If you enable this setting and provide your tenant ID, users who are syncing their OneDrive will see the Folder Backup wizard window when they're signed in. If they close the window, a reminder notification appears in the Sync Activity Center until they move their Desktop and Documents folders.",
+            "property_order": 72,
+            "type": "string",
+            "options": {
+                "infoText": "Key: KFMOptInWithWizard"
+            },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://learn.microsoft.com/en-us/sharepoint/deploy-and-configure-on-macos#kfmoptinwithwizard"
+                }
+            ]
+        },
+        "KFMSilentOptIn": {
+            "title": "KFM Silent Opt-In",
+            "default": "true",
+            "description": "Use this setting to redirect and move your users' Documents and/or Desktop folders to OneDrive without any user interaction. You can move both folders at once or select which folder you want to move. After a folder is moved, this setting won't affect that folder again.",
+            "property_order": 72,
+            "type": "boolean",
+            "options": {
+                "infoText": "Key: KFMSilentOptIn"
+            },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://learn.microsoft.com/en-us/sharepoint/deploy-and-configure-on-macos#kfmsilentoptin"
+                }
+            ]
+        },
         "OpenAtLogin": {
             "title": "Open At Login",
             "default": true,
