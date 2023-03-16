@@ -252,7 +252,7 @@
             "title": "Enable Sync Admin Reports",
             "default": false,
             "description": "This setting specifies whether Sync Admin Reports is enabled. If you enable this setting, OneDrive sync health reports will be sent to OneDrive sync health dashboard in the Microsoft 365 Apps admin center.",
-            "property_order": 62,
+            "property_order": 65,
             "type": "boolean",
             "options": {
                 "infoText": "Key: EnableSyncAdminReports"
@@ -268,7 +268,7 @@
             "title": "Hide Dock Icon",
             "default": true,
             "description": "This setting specifies whether a dock icon for OneDrive is shown. If you set this setting's value to True, the OneDrive dock icon is hidden even if the app is running.",
-            "property_order": 65,
+            "property_order": 70,
             "type": "boolean",
             "options": {
                 "infoText": "Key: HideDockIcon"
@@ -284,7 +284,7 @@
             "title": "Hydration Disallowed Apps",
             "default": "e.g. [{\"ApplicationId\":\"appId\",\"MaxBundleVersion\":\"1.1\",\"MaxBuildVersion\":\"1.0\"}]",
             "description": "This setting prevents apps from automatically downloading online-only files. You can use this setting to lock down apps that don't work correctly with your deployment of Files On-Demand. To enable this setting, you must define a string in JSON format. For example: [{\"ApplicationId\":\"appId\",\"MaxBundleVersion\":\"1.1\",\"MaxBuildVersion\":\"1.0\"}] \"appID\" can be either the BSD process name or the bundle display name. \"MaxBuildVersion\" denotes the maximum build version of the app that will be blocked. \"MaxBundleVersion\" denotes the maximum bundle version of the app that will be blocked.",
-            "property_order": 70,
+            "property_order": 75,
             "type": "string",
             "options": {
                 "infoText": "Key: HydrationDisallowedApps"
@@ -300,7 +300,7 @@
             "title": "KFM Block Opt-In",
             "default": "e.g. 1 or 2",
             "description": "This setting prevents users from moving their Documents and Desktop folders to any OneDrive account. If you enable KFMBlockOptIn, users aren't prompted to protect their Desktop and Documents folders, and the Manage backup command is disabled. If the user has already moved their Desktop and Documents folders, the files in those folders will remain in OneDrive. This setting doesn't take effect if you've enabled KFMOptInWithWizard or KFMSilentOptIn. If you set this setting's value to 1, it will prevent Folder Backup. If you set the value to 2, it will redirect any folders previously used for Folder Backup back to the user’s device and stop the setting from running further.",
-            "property_order": 71,
+            "property_order": 80,
             "type": "string",
             "options": {
                 "infoText": "Key: KFMBlockOptIn"
@@ -316,7 +316,7 @@
             "title": "KFM Block Opt-Out",
             "default": "true",
             "description": "This setting forces users to keep their Documents and Desktop folders directed to OneDrive. If you enable this setting, the Stop Backup button in the Manage Folder Backup window is disabled, and users receive an error if they try to stop syncing their Desktop or Documents folder.",
-            "property_order": 72,
+            "property_order": 81,
             "type": "boolean",
             "options": {
                 "infoText": "Key: KFMBlockOptOut"
@@ -332,7 +332,7 @@
             "title": "KFM Opt-In With Wizard",
             "default": "e.g. 0344bcc1-e70b-4e24-a67e-923cb9a226a7",
             "description": "This setting displays a wizard that prompts users to move their Documents and Desktop folders to OneDrive. If you enable this setting and provide your tenant ID, users who are syncing their OneDrive will see the Folder Backup wizard window when they're signed in. If they close the window, a reminder notification appears in the Sync Activity Center until they move their Desktop and Documents folders.",
-            "property_order": 72,
+            "property_order": 85,
             "type": "string",
             "options": {
                 "infoText": "Key: KFMOptInWithWizard"
@@ -348,10 +348,58 @@
             "title": "KFM Silent Opt-In",
             "default": "true",
             "description": "Use this setting to redirect and move your users' Documents and/or Desktop folders to OneDrive without any user interaction. You can move both folders at once or select which folder you want to move. After a folder is moved, this setting won't affect that folder again.",
-            "property_order": 72,
+            "property_order": 90,
             "type": "boolean",
             "options": {
                 "infoText": "Key: KFMSilentOptIn"
+            },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://learn.microsoft.com/en-us/sharepoint/deploy-and-configure-on-macos#kfmsilentoptin"
+                }
+            ]
+        },
+        "KFMSilentOptInWithNotification": {
+            "title": "KFM Silent Opt-In With Notification",
+            "default": "true",
+            "description": "If you enable KFMSilentOptIn and provide your tenant ID, you can choose whether to display a notification to users after their folders have been redirected.",
+            "property_order": 95,
+            "type": "boolean",
+            "options": {
+                "infoText": "Key: KFMSilentOptInWithNotification"
+            },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://learn.microsoft.com/en-us/sharepoint/deploy-and-configure-on-macos#kfmsilentoptin"
+                }
+            ]
+        },
+        "KFMSilentOptInDesktop": {
+            "title": "KFM Silent Opt-In Desktop",
+            "default": "true",
+            "description": "If you don't set the following setting, then the default setting will move both folders into OneDrive. If you want to specify which folder to move, you should set the following setting.",
+            "property_order": 100,
+            "type": "boolean",
+            "options": {
+                "infoText": "Key: KFMSilentOptInDesktop"
+            },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://learn.microsoft.com/en-us/sharepoint/deploy-and-configure-on-macos#kfmsilentoptin"
+                }
+            ]
+        },
+        "KFMSilentOptInDocuments": {
+            "title": "KFM Silent Opt-In Documents",
+            "default": "true",
+            "description": "If you don't set the following setting, then the default setting will move both folders into OneDrive. If you want to specify which folder to move, you should set the following setting.",
+            "property_order": 105,
+            "type": "boolean",
+            "options": {
+                "infoText": "Key: KFMSilentOptInDocuments"
             },
             "links": [
                 {
@@ -364,7 +412,7 @@
             "title": "Open At Login",
             "default": true,
             "description": "This setting specifies whether OneDrive starts automatically when the user logs in. If you set this setting's value to True, OneDrive starts automatically when the user logs in on Mac.",
-            "property_order": 75,
+            "property_order": 90,
             "type": "boolean",
             "options": {
                 "infoText": "Key: OpenAtLogin"
@@ -380,7 +428,7 @@
             "title": "SharePoint On-Prem Front Door URL",
             "default": "e.g. https://contoso.sharepoint.com/",
             "description": "This setting specifies the SharePoint Server 2019 on-premises URL that the OneDrive sync app must try to authenticate and sync against. To enable this setting, you must define a string containing the URL of the on-premises SharePoint Server.",
-            "property_order": 80,
+            "property_order": 110,
             "type": "string",
             "options": {
                 "infoText": "Key: SharePointOnPremFrontDoorUrl"
@@ -396,7 +444,7 @@
             "title": "SharePoint On-Prem Prioritization Policy",
             "default": 1,
             "description": "This setting determines whether or not the client should set up sync for SharePoint Server or SharePoint in Microsoft 365 first during the first-run scenario when the email is the same for both SharePoint Server on-premises and SharePoint in Microsoft 365 in a hybrid scenario. If you set this setting's value to 1, it is an indication that OneDrive should set up SharePoint Server on-premises first, followed by SharePoint in Microsoft 365.",
-            "property_order": 85,
+            "property_order": 115,
             "type": "integer",
             "options": {
                 "infoText": "Key: SharePointOnPremPrioritizationPolicy"
@@ -412,7 +460,7 @@
             "title": "SharePoint On-Prem Tenant Name",
             "default": "e.g. Contoso",
             "description": "This setting enables you to specify the name of the folder created for syncing the SharePoint Server 2019 files specified in the Front Door URL.",
-            "property_order": 90,
+            "property_order": 120,
             "type": "string",
             "options": {
                 "infoText": "Key: SharePointOnPremTenantName"
@@ -428,7 +476,7 @@
             "title": "Tier",
             "default": "Production",
             "description": "This setting lets you specify the ring for users in your organization. The OneDrive sync app updates to the public through three rings; first to Insiders, then to Production, and finally to Deferred. When you enable this setting and select a ring, users aren't able to change it.",
-            "property_order": 92,
+            "property_order": 125,
             "type": "string",
             "options": {
                 "enum_titles": [
@@ -454,7 +502,7 @@
             "title": "Upload Bandwidth Limit",
             "default": 50000,
             "description": "This setting defines the maximum upload throughput rate in KB/sec for computers running the OneDrive sync app. To enable this setting, set a value between 50 and 100,000 that is the upload throughput rate the sync app can use.",
-            "property_order": 95,
+            "property_order": 130,
             "type": "integer",
             "options": {
                 "infoText": "Key: UploadBandwidthLimited"
