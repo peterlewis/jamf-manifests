@@ -346,7 +346,7 @@
         },
         "KFMSilentOptIn": {
             "title": "KFM Silent Opt-In",
-            "default": ""e.g. 0344bcc1-e70b-4e24-a67e-923cb9a226a7",
+            "default": "e.g. 0344bcc1-e70b-4e24-a67e-923cb9a226a7",
             "description": "Use this setting to redirect and move your users' Documents and/or Desktop folders to OneDrive without any user interaction. You can move both folders at once or select which folder you want to move. After a folder is moved, this setting won't affect that folder again.",
             "property_order": 90,
             "type": "string",
